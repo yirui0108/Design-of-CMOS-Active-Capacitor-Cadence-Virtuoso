@@ -30,28 +30,25 @@ $$C_{eq} = k \cdot C$$
 ## Theory:
 *(refer to the annotated research paper for further explanation)*
 
-* Voltage fluctuation in the LDO output node is transmitted to the capacitor using a voltage follower transistor (common drain).
-* The capacitor generates capacitive current according to the transmitted voltage.
-* The capacitive current is sensed by the current mirror transistor, mirrored in the ratio 1:1 and later on 1:5, and fed back to the input node as the output current.
-* M3 is tied up to the $V_{in}$ also instead of a constant voltage, so that, when $V_{DS,M2}$ moves up and down due to $V_{GS1}$ increasing and decreasing, the same happens across M4 also, which improves matching.
+1. Voltage fluctuation in the LDO output node is transmitted to the capacitor using a voltage follower transistor (common drain).
+2. The capacitor generates capacitive current according to the transmitted voltage.
+3. The capacitive current is sensed by the current mirror transistor, mirrored in the ratio 1:1 and later on 1:5, and fed back to the input node as the output current.
+4. M3 is tied up to the $V_{in}$ also instead of a constant voltage, so that, when $V_{DS,M2}$ moves up and down due to $V_{GS1}$ increasing and decreasing, the same happens across M4 also, which improves matching.
+5. Impedance Matching Technique: The gate of the mirroring transistor (M3) is connected directly to the input terminal $V_{in}$ rather than a constant DC bias voltage. Thus, transistors M2 and M4 operate under identical electrical and topological conditions.
 
-### Impedance Matching Technique
-The gate of the mirroring transistor (M3) is connected directly to the input terminal $V_{in}$ rather than a constant DC bias voltage. Thus, transistors M2 and M4 operate under identical electrical and topological conditions.
+<img width="549" height="531" alt="image" src="https://github.com/user-attachments/assets/0a723f2f-b7dc-4276-91e8-74e6fc56e8bd" />
 
-![Basic idea of the proposed capacitor multiplier](path/to/basic_idea_image.png)
-*Basic idea of the proposed capacitor multiplier.*
 
-## Related Paper: A Novel High Speed Current Mirror Compensation Technique
+#### Related Paper: A Novel High Speed Current Mirror Compensation Technique and Application
 *By Thartfah Voo and Chris Toumazou*
 
 * **a.** This method involves inserting a compensation resistor between the gates of the primary mirror transistors to introduce a zero that cancels the dominant pole.
 * **b.** While theoretical models suggest this can extend bandwidth near the transistor's cut-off frequency, its application within the specific context of this LDO yielded only insignificant improvements in the overall phase margin.
 * **c.** Consequently, while the technique remains a valid high-speed design principle, it did not serve as a primary contributor to the final stability metrics observed in this project.
 
-![Basic current mirror](path/to/basic_current_mirror_image.png)
-*Fig 1. Basic current mirror*
+<img width="483" height="238" alt="image" src="https://github.com/user-attachments/assets/db431a01-5f3a-40b0-8cbe-3ad76556a375" />
 
-## Topology Analysis
+## Topology Analysis:
 
 ### Benefits of the topology:
 * **Simplicity**
@@ -71,7 +68,7 @@ The gate of the mirroring transistor (M3) is connected directly to the input ter
 ### Implementation in Cadence Virtuoso
 The diagram below shows my implementation of the circuit in cadence virtuoso.
 
-![Implementation in Cadence Virtuoso](path/to/implementation_schematic.png)
+<img width="940" height="393" alt="image" src="https://github.com/user-attachments/assets/384b432e-3fb3-4b4c-a8d3-84804cf3cbca" />
 
 ---
 
