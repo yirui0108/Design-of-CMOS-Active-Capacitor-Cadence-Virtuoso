@@ -1,7 +1,10 @@
 # Design of CMOS Active Capacitor
 
 **Implemented and verified the circuit using TSMC 40nm Process Design Kit in Cadence Virtuoso.**
+
 **Implemented the topology based on “High Accuracy CMOS cap multiplier” by Salvatore Pennisi.**
+
+**Disclaimer**: This repository documents an exploration and implementation based on existing research papers. All underlying theory and ideas remain the intellectual property of the original authors; *I am responsible only for the implementation and simulation results presented here*.
 
 ## Project Overview
 
