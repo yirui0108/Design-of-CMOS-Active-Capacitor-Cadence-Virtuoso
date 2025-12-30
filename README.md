@@ -74,24 +74,26 @@ The diagram below shows my implementation of the circuit in cadence virtuoso.
 
 ## Simulation Results: Comparison with the Ideal Capacitor
 
-The primary objective is to demonstrate that the proposed active capacitor circuit can effectively replace bulky physical capacitors in area-constrained LDO designs.
+The primary objective is to demonstrate that the proposed active capacitor circuit can effectively replace bulky physical capacitors in area-constrained integrated LDO designs.
 
 The verification process involves a direct comparative analysis between:
 1.  **A standard passive implementation** (LDO + ideal 100 pF physical output capacitor)
 2.  **The proposed active solution** (LDO + 20pF capacitor connected to the active capacitor circuit with $k = 5$ multiplication factor)
 
-### Overall LDO Performance
+### Control Variables:
+
+#### Overall LDO Performance
 * **Supply voltage:** 1.2V
 * **Output voltage:** 1V
 
-### LDO Core Op-Amp (Cascode Symmetrical CMOS OTA) Performance:
+#### LDO Core Op-Amp (Cascode Symmetrical CMOS OTA) Performance:
 * **Loop gain:** 52.023dB
 * **Bandwidth:** 12.03kHz
 * **Phase Margin:** 52.091deg
 * **UGBW:** 3.21Mhz
 
 **Schematic of the Cascode Symmetrical CMOS OTA:**
-![Schematic of the Cascode Symmetrical CMOS OTA](path/to/ota_schematic.png)
+<img width="940" height="447" alt="image" src="https://github.com/user-attachments/assets/508c1b9c-668b-4b62-92d6-f3e89cc7f2d8" />
 
 ---
 
@@ -101,20 +103,24 @@ The verification process involves a direct comparative analysis between:
 ### 1. Stability Analysis
 Loop stability is critical in LDO design, where the output capacitor contributes a dominant pole and potentially a zero (via ESR) to the frequency response.
 
+
 **Test Schematic:**
-![Stability Test Schematic](path/to/stability_schematic.png)
+<img width="940" height="792" alt="image" src="https://github.com/user-attachments/assets/e884196c-8dba-43e0-bb21-a8a4df943129" />
+
 
 **Results:**
 The top section highlights the performance of the LDO with the 100pF cap, while the bottom section shows the performance of the LDO with the active cap setup.
 
-![Stability Summary Table](path/to/stability_summary_table.png)
+<img width="783" height="347" alt="image" src="https://github.com/user-attachments/assets/3c47c4fa-13f6-4e38-b5db-d76faeeb24f1" />
 
 * The similarity of measured figures in both cases suggests that the active capacitor circuit is effective in multiplying the capacitance of the 20pF capacitor by 5 times to 100pF.
 * **Note:** There is ESR resistance associated with the active capacitor circuit that creates a zero which increases the phase margin of the LDO especially in low load current situations.
 
+
 **Bode Plot:**
 Below shows the bode plot of the LDO with the active capacitor connected, loaded with different load currents.
-![Bode Plot](path/to/bode_plot.png)
+<img width="940" height="444" alt="image" src="https://github.com/user-attachments/assets/7f918878-c8c6-461c-9880-377af7c10788" />
+
 
 #### Measurements (LDO with Active Cap Setup):
 
@@ -130,28 +136,34 @@ Below shows the bode plot of the LDO with the active capacitor connected, loaded
 * Gain margin: 38.312dB
 * Unity gain bandwidth: 1.66Mhz
 
+
+
 ### 2. Line Transient Response
 This test evaluates the regulator's ability to maintain a steady output voltage despite sudden variations in the supply voltage.
 
 **Procedure:** A step function is applied to the LDO input voltage VDD creating a voltage deviation of +/- 10% with respect to the normal voltage level 1.2V, and the output voltage deviation is monitored.
 
-![Step Function Settings](path/to/step_function_settings.png)
+<img width="429" height="453" alt="image" src="https://github.com/user-attachments/assets/97d2991f-6493-4fd2-a58e-46bc2c39d506" />
+
 
 **Test Schematic:**
-![Line Transient Test Schematic](path/to/line_transient_schematic.png)
+<img width="940" height="819" alt="image" src="https://github.com/user-attachments/assets/7311470d-ea31-424d-9ab3-c8e3cf874457" />
+
 
 **Test Results:**
 The output waveform of both the LDO with the 100pF cap and the LDO with the active cap setup closely resembles each other, which also suggests that the active capacitor circuit is effective in multiplying the capacitance of the 20pF capacitor by 5 times to 100pF.
 
-![Combined Transient Response](path/to/combined_transient_response.png)
+<img width="940" height="443" alt="image" src="https://github.com/user-attachments/assets/a29ed358-80ac-460d-b09d-4bd6fdbf2d37" />
+
 
 **When viewed separately:**
 
 *Waveform of the LDO with the 100pF cap*
-![Waveform 100pF](path/to/waveform_100pf.png)
+<img width="940" height="446" alt="image" src="https://github.com/user-attachments/assets/b061e6b5-4fc5-4734-9ca2-7a6736b9e938" />
 
 *Waveform of the LDO with the active cap setup*
-![Waveform Active Cap](path/to/waveform_active_cap.png)
+<img width="940" height="447" alt="image" src="https://github.com/user-attachments/assets/6c386348-7cda-41ea-a01b-74a89a4d81fb" />
+
 
 #### Measurements (LDO with Active Cap Setup):
 
@@ -196,10 +208,10 @@ $$(2 + k_1 k_2 k_3)I_B$$
 This README provides a high-level overview of the active capacitor implementation. For detailed performance metrics, brief circuit explanations, and design evolution, please refer to the dedicated documentation files shown below.
 
 ### Detailed Analysis
-1.  LDO Performance & Benchmarks
-2.  Core Op-Amp Design (Cascode Symmetrical CMOS OTA) performance and brief explanation
-3.  High-Speed Current Mirror Compensation brief explanation
+1.  LDO Performance & Benchmarks 
+2.  Core Op-Amp Design (Cascode Symmetrical CMOS OTA) performance and brief explanation (W.I.P)
+3.  High-Speed Current Mirror Compensation brief explanation (W.I.P)
 
 ### Design History & References
-4.  Previous Iterations: Two voltage mode op amp based active capacitor circuits
+4.  Previous Iterations: Two voltage mode op amp based active capacitor circuits 
 5.  Reference Papers PDF files
