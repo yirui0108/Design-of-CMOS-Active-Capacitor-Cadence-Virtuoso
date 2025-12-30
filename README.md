@@ -50,15 +50,15 @@ $$C_{eq} = k \cdot C$$
 
 ## Topology Analysis:
 
-### Benefits of the topology:
+#### Benefits of the topology:
 * **Simplicity**
 * **Linearity and high bandwidth gain** as current mode is employed (as opposed to the voltage mode designs).
 * **High bandwidth gain reason:** The R-C portion appears in the source follower-capacitor part, where the resistance looking into the source of the source follower is small.
 
-### Disadvantages of the topology:
+#### Disadvantages of the topology:
 * **High power dissipation:** Quiescent current increases with increasing multiplication factor.
 
-### Total DC Quiescent Current Consumption:
+#### Total DC Quiescent Current Consumption:
 
 | Condition | Ideal 100pF Cap | Active Cap |
 | :--- | :--- | :--- |
