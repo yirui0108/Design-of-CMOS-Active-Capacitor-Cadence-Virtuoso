@@ -24,9 +24,10 @@ which results in an equivalent capacitance:
 $$C_{eq} = k \cdot C$$
 
 <img width="682" height="408" alt="image" src="https://github.com/user-attachments/assets/682447e9-e485-4669-9264-3c602911163a" />
+
 *Fig 1: Current-mode capacitance multiplier principle for a grounded capacitor C.*
 
-## Theory
+## Theory:
 *(refer to the annotated research paper for further explanation)*
 
 * Voltage fluctuation in the LDO output node is transmitted to the capacitor using a voltage follower transistor (common drain).
