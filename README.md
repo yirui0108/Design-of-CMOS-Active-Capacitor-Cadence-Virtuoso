@@ -4,7 +4,7 @@
 
 **Implemented the topology based on “High Accuracy CMOS cap multiplier” by Salvatore Pennisi.**
 
-**Disclaimer**: This repository documents an exploration and implementation based on existing research papers. All underlying theory and ideas remain the intellectual property of the original authors; *I am responsible only for the implementation and simulation results presented here*.
+***Disclaimer***: This repository documents an exploration and implementation based on existing research papers. All underlying theory and ideas remain the intellectual property of the original authors; **I am responsible only for the implementation and simulation results presented here**.
 
 ## Project Overview
 
