@@ -138,6 +138,8 @@ Below shows the bode plot of the LDO with the active capacitor connected, loaded
 
 
 
+
+
 ### 2. Line Transient Response
 This test evaluates the regulator's ability to maintain a steady output voltage despite sudden variations in the supply voltage.
 
