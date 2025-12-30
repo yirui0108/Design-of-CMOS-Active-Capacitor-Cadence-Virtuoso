@@ -6,11 +6,11 @@
 
 ***Disclaimer***: This repository documents an exploration and implementation based on existing research papers. All underlying theory and ideas remain the intellectual property of the original authors; **I am responsible only for the implementation and simulation results presented here**.
 
-## Project Overview
+## Project Overview:
 
 This project is to explore the active capacitor design and demonstrate its performance while serving as the output compensation element for a Low-Dropout Regulator (LDO).
 
-### Project Motivation
+## Project Motivation:
 * Analog integrated systems frequently require high-value capacitors for filtering and compensation.
 * However, capacitors occupy large areas in silicon implementation and hence they suffer from the integration problem.
 * Therefore, active capacitor, which makes use of circuit technique, provides a solution to enhance the capacitor value from a small capacitor, with the objective of saving silicon area.
@@ -23,7 +23,7 @@ which results in an equivalent capacitance:
 
 $$C_{eq} = k \cdot C$$
 
-![Current-mode capacitance multiplier principle for a grounded capacitor C](path/to/fig1_image.png)
+<img width="682" height="408" alt="image" src="https://github.com/user-attachments/assets/682447e9-e485-4669-9264-3c602911163a" />
 *Fig 1: Current-mode capacitance multiplier principle for a grounded capacitor C.*
 
 ## Theory
