@@ -214,5 +214,5 @@ This README provides a high-level overview of the active capacitor implementatio
 2.  Core Op-Amp Design (Cascode Symmetrical CMOS OTA) performance and brief explanation (W.I.P)
 
 ### Design History & References
-4.  Previous Iterations: Two voltage mode op amp based active capacitor circuits 
-5.  Reference Papers PDF files
+3.  Previous Iterations: Two voltage mode op amp based active capacitor circuits 
+4.  Reference Papers PDF files
