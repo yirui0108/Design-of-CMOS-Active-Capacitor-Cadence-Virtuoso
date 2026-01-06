@@ -33,7 +33,8 @@ The top section is ideal 100pF cap, bottom section is active cap, ref to 100u il
 ## 4. PSR test
 
 ### a. Test schematic
-<img width="940" height="445" alt="image" src="https://github.com/user-attachments/assets/5463eb60-87de-48aa-a638-57e8372eb8c7" />
+<img width="940" height="837" alt="image" src="https://github.com/user-attachments/assets/5d6f36c4-99e3-49fe-87f2-30ba7daec8a2" />
+
 
 
 ### b. Results
