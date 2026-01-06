@@ -1,26 +1,26 @@
 # LDO Performance & Benchmarks
 
 ## 1. Overall LDO performance
-* [cite_start]**Supply voltage:** 1.2V [cite: 3]
-* [cite_start]**Output voltage:** 1V [cite: 4]
+* **Supply voltage:** 1.2V 
+* **Output voltage:** 1V 
 
 ## 2. Total DC quiescent current consumption
 
 ### a. Full load (load current = 38mA)
-* **i. [cite_start]Ideal 100p cap:** 38.5mA [cite: 7]
-* **ii. [cite_start]Active cap:** 38.55mA [cite: 8]
+* **i. Ideal 100p cap:** 38.5mA 
+* **ii. Active cap:** 38.55mA 
 
 ### b. No load
-* **i. [cite_start]Ideal 100p cap:** 500.2uA [cite: 10]
-* **ii. [cite_start]Active cap:** 549.8uA [cite: 11]
+* **i. Ideal 100p cap:** 500.2uA 
+* **ii. Active cap:** 549.8uA 
 
 ## 3. Stability analysis with probe
 
 ### a. Test schematic
-[cite_start]![Test Schematic for Stability Analysis](path/to/schematic_image_1.png) [cite: 13]
+![Test Schematic for Stability Analysis](path/to/schematic_image_1.png) 
 
 ### b. Results
-[cite_start]The top section is ideal 100pF cap, bottom section is active cap, ref to 100u iload, the active cap has some Resr effect to cancel the pole. [cite: 14]
+The top section is ideal 100pF cap, bottom section is active cap, ref to 100u iload, the active cap has some Resr effect to cancel the pole. 
 
 **Stability Summary - circuit "test_LDO_stb_currentmode_fullrange_52dB" with loop probe "IPRB2"**
 
@@ -43,86 +43,86 @@
 | 38m | 67.538 | 1.4151M | 50.156 | 52.477M |
 
 ### c. Bode Plot
-[cite_start]![Stability Response Bode Plot](path/to/bode_plot_image.png) [cite: 15]
+![Stability Response Bode Plot](path/to/bode_plot_image.png) 
 
 ## 4. PSR test
 
 ### a. Test schematic
-[cite_start]![PSR Test Schematic](path/to/psr_schematic.png) [cite: 17]
+![PSR Test Schematic](path/to/psr_schematic.png) 
 
 ### b. Results
-[cite_start]Red/orange is ideal, and blue/green is the one with active cap. [cite: 18]
+Red/orange is ideal, and blue/green is the one with active cap. 
 
-[cite_start]![AC Response Graph](path/to/ac_response_graph.png) [cite: 18]
+![AC Response Graph](path/to/ac_response_graph.png)
 
 ### c. Ideal cap PSR stats
 
 **i. Iload = 38mA**
-* [cite_start]**Low freq:** -51.53dB until 1kHz [cite: 21]
-* [cite_start]**100kHz:** -43.46dB [cite: 22]
-* [cite_start]**1Mhz:** -23.74dB [cite: 23]
-* [cite_start]**Peak:** -18.46dB at 2.52MHz [cite: 24]
+* **Low freq:** -51.53dB until 1kHz 
+* **100kHz:** -43.46dB 
+* **1Mhz:** -23.74dB 
+* **Peak:** -18.46dB at 2.52MHz 
 
 **ii. Iload = 0A**
-* [cite_start]**Low freq:** -68.32dB until 500Hz [cite: 26]
-* [cite_start]**100kHz:** -46.22dB [cite: 27]
-* [cite_start]**1Mhz:** -25.46dB [cite: 28]
-* [cite_start]**Peak:** -18.71dB at 2.52Mhz [cite: 29]
+* **Low freq:** -68.32dB until 500Hz 
+* **100kHz:** -46.22dB 
+* **1Mhz:** -25.46dB 
+* **Peak:** -18.71dB at 2.52Mhz 
 
 ## 5. Transient analysis
 
 ### a. Test schematic
-[cite_start]![Transient Analysis Test Schematic](path/to/transient_schematic.png) [cite: 31]
+![Transient Analysis Test Schematic](path/to/transient_schematic.png) 
 
 ### b. Results
-[cite_start]Red: ideal 100p cap; green: active cap, the waveforms coincide with one another similarly. [cite: 32]
+Red: ideal 100p cap; green: active cap, the waveforms coincide with one another similarly. 
 
-[cite_start]![Transient Response Graph](path/to/transient_response_graph.png) [cite: 32]
+![Transient Response Graph](path/to/transient_response_graph.png) 
 
 ### c. The performance of active cap
 
 **i. Undershoot situation:**
-* [cite_start]**Undershoot voltage:** 735.544mV [cite: 35]
-* [cite_start]**Settling time:** 508.989ns - 200ns = [cite: 36]
+* **Undershoot voltage:** 735.544mV 
+* **Settling time:** 508.989ns - 200ns 
 
 **ii. Overshoot situation:**
-* [cite_start]**Overshoot voltage:** 1.193V [cite: 38]
-* [cite_start]**Settling time:** 1.298us - 1.005us = [cite: 39]
+* **Overshoot voltage:** 1.193V 
+* **Settling time:** 1.298us - 1.005us 
 
 ## 6. Line transient simulation
-[cite_start]The supply voltage will be applied as a pulse with certain range, for example +/- 10%. [cite: 40]
+The supply voltage will be applied as a pulse with certain range, for example +/- 10%. 
 
 ### a. Line Transient Pulse settings
-[cite_start]![Pulse Settings](path/to/pulse_settings_image.png) [cite: 41]
+![Pulse Settings](path/to/pulse_settings_image.png) 
 
 ### b. Test schematic
-[cite_start]![Line Transient Test Schematic](path/to/line_transient_schematic.png) [cite: 42]
+![Line Transient Test Schematic](path/to/line_transient_schematic.png) 
 
 ### c. Results
-[cite_start]The waveforms looks very similar when being put together, for both the ideal 100pF cap and the active cap. [cite: 43]
+The waveforms looks very similar when being put together, for both the ideal 100pF cap and the active cap. 
 
-[cite_start]![Line Transient Response Combined](path/to/combined_transient_response.png) [cite: 43]
+![Line Transient Response Combined](path/to/combined_transient_response.png) 
 
 ### d. Ideal 100p cap waveform
-[cite_start]![Ideal 100p Cap Waveform](path/to/ideal_cap_waveform.png) [cite: 44]
+![Ideal 100p Cap Waveform](path/to/ideal_cap_waveform.png) 
 
 ### e. Active cap waveform
-[cite_start]![Active Cap Waveform](path/to/active_cap_waveform.png) [cite: 45]
+![Active Cap Waveform](path/to/active_cap_waveform.png) 
 
 ### f. Measurement relevant to the waveform of the LDO with the active cap setup
 
 **Full load:**
 * **Overshoot situation:**
-    * [cite_start]**Overshoot voltage:** 985.242mV jump to 1.2271V [cite: 49]
-    * [cite_start]**Settling time:** 618.356ns - 300ns = 318.356ns [cite: 50]
+    * **Overshoot voltage:** 985.242mV jump to 1.2271V 
+    * **Settling time:** 618.356ns - 300ns = 318.356ns 
 * **Undershoot situation:**
-    * [cite_start]**Undershoot voltage:** 1V drop to 759.675mV [cite: 52]
-    * [cite_start]**Settling time:** 1.627us - 1.11us = 0.517us [cite: 53]
+    * **Undershoot voltage:** 1V drop to 759.675mV 
+    * **Settling time:** 1.627us - 1.11us = 0.517us 
 
 **No load:**
 * **Overshoot situation:**
-    * [cite_start]**Overshoot voltage:** 999.891mV jump to 1.231V [cite: 56]
-    * [cite_start]**Settling time:** 550.1313ns - 300ns = 250.1313ns [cite: 57]
+    * **Overshoot voltage:** 999.891mV jump to 1.231V 
+    * **Settling time:** 550.1313ns - 300ns = 250.1313ns 
 * **Undershoot situation:**
-    * [cite_start]**Undershoot voltage:** 1V drop to 772.22mV [cite: 59]
-    * [cite_start]**Settling time:** 1.372us - 1.11us = 0.262us [cite: 60]
+    * **Undershoot voltage:** 1V drop to 772.22mV 
+    * **Settling time:** 1.372us - 1.11us = 0.262us 
