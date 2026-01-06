@@ -17,43 +17,30 @@
 ## 3. Stability analysis with probe
 
 ### a. Test schematic
-![Test Schematic for Stability Analysis](path/to/schematic_image_1.png) 
+<img width="940" height="793" alt="image" src="https://github.com/user-attachments/assets/a8edd1d9-e66f-4bc1-a0c0-23726406316a" />
+
 
 ### b. Results
 The top section is ideal 100pF cap, bottom section is active cap, ref to 100u iload, the active cap has some Resr effect to cancel the pole. 
 
-**Stability Summary - circuit "test_LDO_stb_currentmode_fullrange_52dB" with loop probe "IPRB2"**
+<img width="788" height="349" alt="image" src="https://github.com/user-attachments/assets/5dc6d835-7343-4e7e-85c6-a75f941a5eee" />
 
-| iload | PM(deg) | @Freq(Hz) | GM(dB) | @Freq(Hz) |
-| :--- | :--- | :--- | :--- | :--- |
-| 0 | 58.632 | 1.6551M | 24.104 | 10.418M |
-| 9.5m | 63.902 | 1.6503M | 40.301 | 32.001M |
-| 19m | 64.861 | 1.5814M | 42.851 | 36.368M |
-| 28.5m | 65.956 | 1.502M | 44.503 | 38.87M |
-| 38m | 67.377 | 1.415M | 45.942 | 40.82M |
-
-**Stability Summary - circuit "test_LDO_stb_currentmode_fullrange_52dB" with loop probe "IPRB0"**
-
-| iload | PM(deg) | @Freq(Hz) | GM(dB) | @Freq(Hz) |
-| :--- | :--- | :--- | :--- | :--- |
-| 0 | 63.642 | 1.6612M | 38.312 | 28.927M |
-| 9.5m | 64.337 | 1.6504M | 47.284 | 48.828M |
-| 19m | 65.131 | 1.5814M | 48.198 | 50.113M |
-| 28.5m | 66.157 | 1.5021M | 49.126 | 51.223M |
-| 38m | 67.538 | 1.4151M | 50.156 | 52.477M |
 
 ### c. Bode Plot
-![Stability Response Bode Plot](path/to/bode_plot_image.png) 
+<img width="940" height="445" alt="image" src="https://github.com/user-attachments/assets/4b44edc9-bc76-4b1a-a192-241c2c28a6b7" />
+
 
 ## 4. PSR test
 
 ### a. Test schematic
-![PSR Test Schematic](path/to/psr_schematic.png) 
+<img width="940" height="445" alt="image" src="https://github.com/user-attachments/assets/5463eb60-87de-48aa-a638-57e8372eb8c7" />
+
 
 ### b. Results
 Red/orange is ideal, and blue/green is the one with active cap. 
 
-![AC Response Graph](path/to/ac_response_graph.png)
+<img width="940" height="446" alt="image" src="https://github.com/user-attachments/assets/d6bf195e-8cac-454a-b06f-70b8f492684e" />
+
 
 ### c. Ideal cap PSR stats
 
@@ -72,42 +59,48 @@ Red/orange is ideal, and blue/green is the one with active cap.
 ## 5. Transient analysis
 
 ### a. Test schematic
-![Transient Analysis Test Schematic](path/to/transient_schematic.png) 
+<img width="940" height="796" alt="image" src="https://github.com/user-attachments/assets/837dae29-564a-4a23-8ac7-3d2e8c62db42" />
+
 
 ### b. Results
 Red: ideal 100p cap; green: active cap, the waveforms coincide with one another similarly. 
 
-![Transient Response Graph](path/to/transient_response_graph.png) 
+<img width="940" height="447" alt="image" src="https://github.com/user-attachments/assets/1ba7c694-b45f-4808-bc1d-81cc6df4e053" />
+
 
 ### c. The performance of active cap
 
 **i. Undershoot situation:**
 * **Undershoot voltage:** 735.544mV 
-* **Settling time:** 508.989ns - 200ns 
+* **Settling time:** 508.989ns - 200ns = 308.989ns
 
 **ii. Overshoot situation:**
 * **Overshoot voltage:** 1.193V 
-* **Settling time:** 1.298us - 1.005us 
+* **Settling time:** 1.298us - 1.005us = 0.293us
 
 ## 6. Line transient simulation
 The supply voltage will be applied as a pulse with certain range, for example +/- 10%. 
 
 ### a. Line Transient Pulse settings
-![Pulse Settings](path/to/pulse_settings_image.png) 
+<img width="451" height="476" alt="image" src="https://github.com/user-attachments/assets/df6e62aa-4ac0-445f-b5ec-e686c345f5db" />
+
 
 ### b. Test schematic
-![Line Transient Test Schematic](path/to/line_transient_schematic.png) 
+<img width="940" height="819" alt="image" src="https://github.com/user-attachments/assets/0d08dd2c-a686-4650-893b-061680120ecb" />
+
 
 ### c. Results
 The waveforms looks very similar when being put together, for both the ideal 100pF cap and the active cap. 
 
-![Line Transient Response Combined](path/to/combined_transient_response.png) 
+<img width="940" height="443" alt="image" src="https://github.com/user-attachments/assets/0c3a1bd1-242d-4d23-98f6-fecc0cb45170" />
 
 ### d. Ideal 100p cap waveform
-![Ideal 100p Cap Waveform](path/to/ideal_cap_waveform.png) 
+<img width="940" height="446" alt="image" src="https://github.com/user-attachments/assets/f0a80541-42d8-4e8a-8ca4-67b859765759" />
+
 
 ### e. Active cap waveform
-![Active Cap Waveform](path/to/active_cap_waveform.png) 
+<img width="940" height="446" alt="image" src="https://github.com/user-attachments/assets/1afaee24-4c65-411a-9256-e7f4d62a090e" />
+
 
 ### f. Measurement relevant to the waveform of the LDO with the active cap setup
 
