@@ -211,7 +211,7 @@ This README provides a high-level overview of the active capacitor implementatio
 
 ### Detailed Analysis
 1.  LDO Performance & Benchmarks 
-2.  Core Op-Amp Design (Cascode Symmetrical CMOS OTA) performance and brief explanation (W.I.P)
+2.  Core Op-Amp Design (Cascode Symmetrical CMOS OTA) performance and brief explanation (see the annotated file in 4. Reference Papers PDF files)
 
 ### Design History & References
 3.  Previous Iterations: Two voltage mode op amp based active capacitor circuits 
