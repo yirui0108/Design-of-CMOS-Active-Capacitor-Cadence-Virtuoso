@@ -55,34 +55,31 @@ From the results, the circuit shows its potential of serving as a capacitance mu
 ## Challenges and Failure Analysis
 Nevertheless, the circuit did not make it to the capacitance multiplication test stage due to the following reasons:
 
-1.  **Transmission Gate Issues:** In my implementation, the transmission gates act like a short circuit once the `iprobe` is removed, which formed a closed loop consisting of the output node and inverting input, limiting the gain to unity.
-    * The self-biasing property of the differential input gate is achieved at the cost of the high gain expected from the PMOS current mirror load (which should provide high output resistance).
-2.  **Biasing Difficulties:** The most straightforward solution was to unplug the transmission gates and explore other biasing methods, but this leads to other issues:
-    * Without proper biasing, the DC operating voltage of the differential input gate and source follower input node will be undefined.
-    * To define the DC operating voltage of the source follower input node, one solution is to replace the current mirror NMOS with a resistor or diode-connected NMOS in the source follower branch. This creates issues related to source degeneration resistance.
+1.  **Transmission Gate Issues:**
+In my implementation, the transmission gates act like a short circuit once the iprobe is removed, which formed a a closed loop consisting of the output node and inverting input, limiting the gain to unity. In short, the self-biasing property of the differential input gate is achieved at the cost of achieving the high gain that the circuit is expected to provide with the PMOS current mirror load, as the current mirror shall provide a high output resistance seen from the drain of the differential input pairs. 
 
-### Pivot to Second Iteration
-Therefore, another solution is to replace the current mirror load with a pair of diode-connected PMOS in the differential pair, leading to the **second iteration of the voltage mode active capacitor multiplier circuit**.
-* This approach works as $V_{DS} = V_{GS}$ will be defined by the drain current passing through the diode-connected PMOS.
-* $V_{GS}$ can be tuned by adjusting the tail current and the W/L of the diode-connected PMOS.
-* Further work must be done to bias the differential input pair gate DC operating voltage.
+2.  **Biasing Difficulties:**
+The most straightforward solution was to unplug the transmission gates and explore other biasing methods, however, this will lead to other issues:
+i. Without proper biasing, the DC operating voltage of the differential input gate and source follower input node will be undefined.
+ii. Thus, to define the DC operating voltage of the source follower input node, one solution is to replace the current mirror NMOS into a resistor or a diode-connected NMOS in the source follower branch. This will help in defining the DC operating voltage of the source follower input node but will cause other issues related to source degeneration resistance, which shall be investigated further.
+iii. Therefore, another solution is to replace the current mirror load for a pair of diode-connected PMOS in the differential pair, which leads to the second iteration of the voltage mode active capacitor multiplier circuit. This approach works as VDS = VGS will be defined by the drain current passing through the diode-connected PMOS, and VGS can be further tuned by adjusting the tail current and the W/L of the diode-connected PMOS.
+iv. Further work must be done to bias the differential input pair gate DC operating voltage.
 
 ## Conclusion and Lessons Learned
 This is where the URECA project started. Although this concept did not work and must be abandoned, the following are the lessons learned:
 
 ### 1. Iterative Design Process
-The design started with a few specs (e.g., $V_{DD} = 1.2V$, current consumption < 100uA) and was refined iteratively to bias transistors into the desired operating region. In the future, a more rigorous approach involving NMOS/PMOS characterization and hand calculations should be employed before schematic simulation.
+The design started out with a few specs, for example VDD = 1.2V and current consumption should be less than 100uA, and was refined iteratively to bias the transistors into the desired operating region and achieve the desired gain and bandwidth performance. In the future, a more rigorous approach can be employed, which involves NMOS and PMOS characterization and hand calculations before the completion of any schematic or simulation. 
 
 ### 2. CMOS Process Knowledge
-* **Native NMOS:** Used as the source follower because it requires relatively low $V_{th}$ to be turned on. This enables a wide output voltage swing, preventing signal degradation.
-* **Low Voltage Devices:** Used in the second iteration where the diode-connected PMOS differential pair load has to be implemented in `pch_lvt` to allow sufficient headroom for output voltage swing.
+A native NMOS device is used as the source follower, which requires relatively low Vth to be turned on. This enables a wide range of output voltage swing, which prevents output signal degradation after transmitting through the source follower. Other low voltage devices are used in the second iteration of the voltage mode active capacitor multiplier circuit as well, where the diode-connected PMOS differential pair load has to be implemented in pch_lvt to make way for a sufficient headroom for output voltage swing.
 
 <img width="508" height="242" alt="image" src="https://github.com/user-attachments/assets/0091d9b0-f5be-4b1e-b743-d6cff1487f8e" />
 
 *Cross-sectional view of the native NMOS.*
 
 ### 3. Source Follower Design
-Enough DC quiescent current quota must be allocated to the source follower to increase $g_m$. A large $g_m$ ensures unity gain and reduces output resistance, as shown by the low-pass filter model equation below:
+Enough DC quiescent current quota has to be allocated to the source follower, to increase gm. A big gm value ensures unity gain, and reduces output resistance, as by low-pass filter model equation shown below:
 
 <img width="283" height="91" alt="image" src="https://github.com/user-attachments/assets/50676872-172d-4e9f-b6e1-04e78b1cca47" />
 
