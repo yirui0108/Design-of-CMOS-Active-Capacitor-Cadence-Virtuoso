@@ -8,7 +8,6 @@ The motivation to adopt this topology is to take advantage of the Miller effect.
 
 <img width="808" height="299" alt="image" src="https://github.com/user-attachments/assets/e50e6a2d-8525-4be8-9439-e053fbecf780" />
 
-*Fig. 2. Principle of decap boosting based on Miller effect. The decap value seen from the power supply has been boosted by a factor of $(1+A(\omega j))$.*
 
 ## Circuit Schematics
 
