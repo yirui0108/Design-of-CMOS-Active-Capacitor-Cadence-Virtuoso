@@ -33,8 +33,7 @@ $$C_{eq} = k \cdot C$$
 1. Voltage fluctuation in the LDO output node is transmitted to the capacitor using a voltage follower transistor (common drain).
 2. The capacitor generates capacitive current according to the transmitted voltage.
 3. The capacitive current is sensed by the current mirror transistor, mirrored in the ratio 1:1 and later on 1:5, and fed back to the input node as the output current.
-4. M3 is tied up to the $V_{in}$ also instead of a constant voltage, so that, when $V_{DS,M2}$ moves up and down due to $V_{GS1}$ increasing and decreasing, the same happens across M4 also, which improves matching.
-5. Impedance Matching Technique: The gate of the mirroring transistor (M3) is connected directly to the input terminal $V_{in}$ rather than a constant DC bias voltage. Thus, transistors M2 and M4 operate under identical electrical and topological conditions.
+4. M3 is tied up to the $V_{in}$ also instead of a constant DC bias voltage, so that, when $V_{DS,M2}$ moves up and down due to $V_{GS1}$ increasing and decreasing, the same happens across M4 also, which improves matching, where transistors M2 and M4 operate under identical electrical and topological conditions.
 
 <img width="549" height="531" alt="image" src="https://github.com/user-attachments/assets/0a723f2f-b7dc-4276-91e8-74e6fc56e8bd" />
 
