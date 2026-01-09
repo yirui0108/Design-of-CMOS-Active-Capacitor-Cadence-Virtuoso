@@ -152,3 +152,7 @@ The minimum transistor length of the PMOS current mirror load and the NMOS diffe
 ### 6. Amplifier Characteristics
 * **Gain:** Limited as there is only one gain stage.
 * **Bandwidth:** Potentially wide if the supply current is large enough, since there is no multiple stages and the resistance and capacitance seen from the output of the gain stage are limited.
+
+Below shows the cutoff frequency of different configurations of a single transistor amplifier:
+<img width="892" height="715" alt="image" src="https://github.com/user-attachments/assets/bb07feac-886e-47bc-bb51-c707b9ae9fa6" />
+
