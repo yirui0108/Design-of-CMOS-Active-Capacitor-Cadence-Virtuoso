@@ -100,8 +100,6 @@ The verification process involves a direct comparative analysis between:
 *The brief benchmark is shown in the below, please refer to the dedicated test and benchmark markdown file for further LDO simulations.*
 
 ### 1. Stability Analysis
-Loop stability is critical in LDO design, where the output capacitor contributes a dominant pole and potentially a zero (via ESR) to the frequency response.
-
 
 **Test Schematic:**
 <img width="940" height="792" alt="image" src="https://github.com/user-attachments/assets/e884196c-8dba-43e0-bb21-a8a4df943129" />
