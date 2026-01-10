@@ -59,9 +59,13 @@ In my implementation, the transmission gates act like a short circuit once the i
 
 2.  **Biasing Difficulties:**
 The most straightforward solution was to unplug the transmission gates and explore other biasing methods, however, this will lead to other issues:
+
 i. Without proper biasing, the DC operating voltage of the differential input gate and source follower input node will be undefined.
+
 ii. Thus, to define the DC operating voltage of the source follower input node, one solution is to replace the current mirror NMOS into a resistor or a diode-connected NMOS in the source follower branch. This will help in defining the DC operating voltage of the source follower input node but will cause other issues related to source degeneration resistance, which shall be investigated further.
+
 iii. Therefore, another solution is to replace the current mirror load for a pair of diode-connected PMOS in the differential pair, which leads to the second iteration of the voltage mode active capacitor multiplier circuit. This approach works as VDS = VGS will be defined by the drain current passing through the diode-connected PMOS, and VGS can be further tuned by adjusting the tail current and the W/L of the diode-connected PMOS.
+
 iv. Further work must be done to bias the differential input pair gate DC operating voltage.
 
 ## Conclusion and Lessons Learned
