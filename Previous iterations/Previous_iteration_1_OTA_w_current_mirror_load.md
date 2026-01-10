@@ -75,7 +75,8 @@ This is where the URECA project started. Although this concept did not work and 
 The design started out with a few specs, for example VDD = 1.2V and current consumption should be less than 100uA, and was refined iteratively to bias the transistors into the desired operating region and achieve the desired gain and bandwidth performance. In the future, a more rigorous approach can be employed, which involves NMOS and PMOS characterization and hand calculations before the completion of any schematic or simulation. 
 
 ### 2. CMOS Process Knowledge
-A native NMOS device is used as the source follower, which requires relatively low Vth to be turned on. This enables a wide range of output voltage swing, which prevents output signal degradation after transmitting through the source follower. Other low voltage devices are used in the second iteration of the voltage mode active capacitor multiplier circuit as well, where the diode-connected PMOS differential pair load has to be implemented in pch_lvt to make way for a sufficient headroom for output voltage swing.
+A native NMOS device is used as the source follower, which requires relatively low Vth to be turned on. This enables more headroom for the output voltage to swing upwards, which prevents output signal degradation after transmitting through the source follower. Other low voltage devices are used in the second iteration of the voltage mode active capacitor multiplier circuit as well, where the diode-connected PMOS differential pair load has to be implemented in pch_lvt to make way for a sufficient headroom for output voltage swing.
+
 
 <img width="508" height="242" alt="image" src="https://github.com/user-attachments/assets/0091d9b0-f5be-4b1e-b743-d6cff1487f8e" />
 
