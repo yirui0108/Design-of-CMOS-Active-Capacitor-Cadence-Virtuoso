@@ -149,6 +149,9 @@ Nevertheless, the differential input pairs of the op-amp in this project are ope
 
 <img width="702" height="359" alt="image" src="https://github.com/user-attachments/assets/8f76622d-3272-4517-b021-3d9fb9e2e934" />
 
+<img width="490" height="330" alt="image" src="https://github.com/user-attachments/assets/be51181b-0af1-4aaf-a559-72ad96b8104a" />
+
+
 
 ### 5. Transistor Length Tuning
 The minimum transistor length of the PMOS current mirror load and the NMOS differential input pair must be set as 100nm instead of the minimum length allowed by TSMC 40n PDK, as an extremely short transistor channel length will lead to severe channel length modulation issues, as resistance is proportional to length, shortening the channel due to increasing drain source voltage decreases the output resistance thus reducing the gain of the amplifier. The effect is more pronounced in short channel transistors. However, the increment in transistor length shall be handled in moderation as the bandwidth will shrink significantly if the output resistance increases by too much.
