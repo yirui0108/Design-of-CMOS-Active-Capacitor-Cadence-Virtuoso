@@ -111,7 +111,7 @@ The top section highlights the performance of the LDO with the 100pF cap, while 
 <img width="783" height="347" alt="image" src="https://github.com/user-attachments/assets/3c47c4fa-13f6-4e38-b5db-d76faeeb24f1" />
 
 * The similarity of measured figures in both cases suggests that the active capacitor circuit is effective in multiplying the capacitance of the 20pF capacitor by 5 times to 100pF.
-* **Note:** There is ESR resistance associated with the active capacitor circuit that creates a zero which increases the phase margin of the LDO especially in low load current situations.
+* **Note:** There is ESR (equivalent series resistance) resistance associated with the active capacitor circuit that creates a zero which increases the phase margin of the LDO especially in low load current situations.
 
 
 **Bode Plot:**
