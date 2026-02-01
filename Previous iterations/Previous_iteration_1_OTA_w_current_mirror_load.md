@@ -37,7 +37,7 @@ The picture below shows my implementation of the proposed circuit in Cadence Vir
 The difference between my implementation and the circuit from the papers are in the following:
 
 1.  **Biasing:**
-    * *Paper:* Direct connection of the gate voltages of the two current source transistors in the op-amp to the positive supply rail to avoid extra routing effort.
+    * *Paper:* Direct connection of the gate voltages of the two current source transistors in the op-amp to the positive supply rail (VDD, for digital blocks) to avoid extra routing effort.
     * *Implementation:* The gate voltage is biased by a regular current mirror which is biased by an ideal current source.
 2.  **Multiplexers:**
     * *Paper:* Used to switch off the bias voltages of the current source transistors, cutting off static current during idle mode.
